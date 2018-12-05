@@ -1,5 +1,6 @@
 from django import forms
 from django.contrib.auth import password_validation
+from business.validators import vpassword
 
 
 
@@ -9,7 +10,8 @@ class ChangePasswordForm(forms.Form):
     old_password = forms.CharField(widget=forms.PasswordInput(attrs={'class':'form-control',
                                                                 'placeholder':'Old Password'}))
     new_password1 = forms.CharField(widget=forms.PasswordInput(attrs={'class':'form-control',
-                                                                'placeholder':'New Password'}))
+                                                                'placeholder':'New Password'}),
+                                                                validators=[vpassword])
     new_password2 = forms.CharField(widget=forms.PasswordInput(attrs={'class':'form-control',
                                                                 'placeholder':'Verify New Password'}))
 
