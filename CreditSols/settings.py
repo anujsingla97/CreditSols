@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rolepermissions',
+    'rest_framework',
     'personal',
     'business',
     'engine',
@@ -139,3 +140,12 @@ MEDIA_ROOT = MEDIA_DIR
 MEIDA_URL = '/media/'
 
 ROLEPERMISSIONS_MODULE = 'CreditSols.roles'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.SessionAuthentication',
+    ),
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticatedOrReadOnly',
+    ),
+}
