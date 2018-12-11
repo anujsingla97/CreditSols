@@ -1,7 +1,7 @@
 from django import forms
 from django.contrib.auth import get_user_model
 from .models import UploadFile
-from .validators import vpassword,validate_email_unique,validate_name_unique,validate_name_case
+from CreditSols.validators import vpassword,validate_email_unique,validate_name_unique,validate_name_case
 
 
 

@@ -104,7 +104,7 @@ def signup(request):
             messages.error(request,('Passwords do not match'))
 
         else:
-            messages.error(request,('bank_form.errors'))
+            messages.error(request,bank_form.errors)
     else:
         if request.user.is_authenticated:
             return HttpResponseRedirect(reverse('business:dashboard'))

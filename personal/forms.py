@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth import get_user_model
-from .validators import vpassword,validate_email_unique
+from CreditSols.validators import vpassword,validate_email_unique
 from .models import PersonalInfo,CurrentLoan,CompletedLoan,PersonalAccount
 from django.forms import inlineformset_factory
 

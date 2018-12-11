@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth import password_validation
-from business.validators import vpassword
+from .validators import vpassword
 
 
 
